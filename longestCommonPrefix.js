@@ -9,7 +9,6 @@ var longestCommonPrefix = function (strs) {
     }
 
     let longest_prefix = shortest_str
-    const first_str = strs[0]
     // add an empty space to the start of the array; a way to distinguish words 
     strs.splice(0, ' ', 0)
     const joined_strs = strs.join(' ')
