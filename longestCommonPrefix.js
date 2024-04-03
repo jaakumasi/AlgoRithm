@@ -1,8 +1,8 @@
 /* 4th Problem: Longest Common Prefix.
-   Finds the longest common prefix amongst a list of strings
+Finds the longest common prefix amongst a list of strings
 */
 
-var longestCommonPrefix = function (strs) {
+const longestCommonPrefix = function (strs) {
     let shortest_str = strs[0]
     for (let i = 0; i < strs.length; i++) {
         if (strs[i].length < shortest_str) shortest_str = strs[i]
@@ -19,11 +19,27 @@ var longestCommonPrefix = function (strs) {
             break
         else {
             let splitted_shortest_str = longest_prefix.split('')
-            splitted_shortest_str.pop()
+            splitted_shortest_str.po()
             longest_prefix = splitted_shortest_str.join('')
         }
     }
 
     return longest_prefix
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+longestCommonPrefix(['Jerome', 'Jerry', 'Bell'])
 
