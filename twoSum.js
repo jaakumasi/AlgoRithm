@@ -8,15 +8,14 @@ var twoSum = function (nums, target) {
      * shape of map: 
      * {
      *   'number': {
-     *       'value': number
+     *       'value': number  // the difference between the number and the target
      *       'count': number, // number of times it occurs in the nums array
      *    }
      * }
      */
     let map = {}
 
-    /* create a map entry for each number whose value is an obj: 
-       the difference between it and the target and the number of times it occurs in the array */
+    // create a map entry for each number whose value is an obj: 
     for (let i = 0; i < nums.length; i++) {
         if (map[nums[i]])
             map[nums[i]].count += 1
