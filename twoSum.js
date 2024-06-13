@@ -16,32 +16,32 @@ var twoSum = function (nums, target) {
     let map = {}
 
     // create a map entry for each number whose value is an obj: 
-    for (let i = 0; i < nums.length; i++) {
-        if (map[nums[i]])
-            map[nums[i]].count += 1
+    for (const element of nums) {
+        if (map[element])
+            map[element].count += 1
         else {
-            map[nums[i]] = {
-                value: target - nums[i],
+            map[element] = {
+                value: target - element,
                 count: 1,
             }
         }
     }
 
-    for (let i = 0; i < nums.length; i++) {
-        let val_count_obj = map[nums[i]]
+    for (const element of nums) {
+        let val_count_obj = map[element]
         /* if any number == to its difference with the target and occurs more than once, 
            it passes as a two-sum */
-        if (val_count_obj.value === nums[i] && val_count_obj.count > 1) {
-            output.push([nums[i], nums[i]])
-            delete map[nums[i]]
+        if (val_count_obj.value === element && val_count_obj.count > 1) {
+            output.push([element, element])
+            delete map[element]
         }
         /* if the difference between the number (nums[i]) and the target is != to the number, 
            then its pair is not a value equal to itself so search for its complement */
-        else if (val_count_obj.value !== nums[i]) {
+        else if (val_count_obj.value !== element) {
             let complement_val = map[val_count_obj.value]
             if (complement_val) {
-                output.push([nums[i], map[nums[i]].value])
-                delete map[nums[i]]
+                output.push([element, map[element].value])
+                delete map[element]
             }
         }
     }
