@@ -9,7 +9,7 @@ function twoSum(arr, target) {
     let l_ptr = 0;
     let r_prt = arr.length - 1;
 
-    for (let i = 0; i < arr.length; i++) {
+    while (l_ptr < r_prt) {
         let sum = arr[l_ptr] + arr[r_prt];
         if (sum === target) {
             return [arr[l_ptr], arr[r_prt]]
