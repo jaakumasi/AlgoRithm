@@ -49,7 +49,7 @@ var twoSum = function (nums, target) {
     return output;
 };
 
-const nums = [2, 7, 15, 11, -6]
-const target = 9
+const nums =[0, 10, -9, 7, 19, 4, -11, 6]
+const target = 10
 
 console.log(twoSum(nums, target))
